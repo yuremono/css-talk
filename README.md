@@ -42,15 +42,20 @@ Marketplace または `.vsix` ファイル経由で VS Code に追加。
 
 ```json
 "css-talk.apiKey": "sk-xxxxxx" // OpenAI の APIキーをここに入力
+```
 ### 3. 任意で systemPrompt をカスタマイズ
+```json
 "css-talk.systemPrompt": "あなたはCSS生成専用AIです。..."
+```
 
 ### 4. キーボードショートカット（デフォルト）
+```json
 Cmd+Ctrl+Shift+R 登録モード切り替え
 
 Cmd+Ctrl+Shift+D 行の変数／クラスを辞書に登録
 
 Cmd+Ctrl+Shift+E 選択行をCSSに変換
+```
 
 🔧 備考
 API利用には OpenAI の API キーが必要です（GPT-3.5 / GPT-4 対応）
