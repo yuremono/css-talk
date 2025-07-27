@@ -3,7 +3,11 @@
     "displayName": "CSS Talk",
     "description": "不正確な音声入力をCSSプロパティに変換VS Code拡張",
     "version": "0.0.1",
-    "publisher": "your-name",
+    "publisher": "yuremono",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yuremono/css-talk.git"
+    },
     "engines": {
         "vscode": "^1.70.0"
     },
