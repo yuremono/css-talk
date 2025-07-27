@@ -1,0 +1,17 @@
+# ビルド生成物
+out/
+dist/
+*.vsix
+
+# Node modules
+node_modules/
+
+# VS Code テストランタイム
+.vscode-test/
+
+# ローカル VS Code 設定ファイル（個人環境に依存）
+.vscode/
+
+# ログ・一時ファイル（あれば）
+*.log
+*.tmp
