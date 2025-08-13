@@ -1,11 +1,21 @@
+# Exclude VS Code workspace files
 .vscode/**
 .vscode-test/**
+
+# Exclude source and tests from the package (runtime uses out/)
 src/**
-.gitignore
-.yarnrc
-vsc-extension-quickstart.md
-**/tsconfig.json
-**/eslint.config.mjs
 **/*.map
-**/*.ts
-**/.vscode-test.*
+**/*.log
+
+# Docs and quickstart not needed in vsix size (optional)
+vsc-extension-quickstart.md
+
+# Local env or secrets
+**/.env*
+
+# Project-specific examples/tests not required at runtime
+/test/**
+test.html
+
+# Misc
+**/.DS_Store

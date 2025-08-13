@@ -2,7 +2,7 @@
     "name": "css-talk",
     "displayName": "CSS Talk",
     "description": "不正確な音声入力をCSSプロパティに変換VS Code拡張",
-    "version": "0.0.2",
+"version": "0.0.3",
     "publisher": "yuremono",
     "repository": {
         "type": "git",
@@ -42,6 +42,11 @@
                     "type": "string",
                     "default": "",
                     "description": "Your personal OpenAI API key"
+                },
+                "css-talk.systemPrompt": {
+                        "type": "string",
+                        "default": "",
+                        "description": "CSS変換時に用いるシステムプロンプト（改行は \\n を使用）"
                 }
             }
         },
