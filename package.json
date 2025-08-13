@@ -1,89 +1,93 @@
 {
-    "name": "css-talk",
-    "displayName": "CSS Talk",
-    "description": "不正確な音声入力をCSSプロパティに変換VS Code拡張",
-"version": "0.0.3",
-    "publisher": "yuremono",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/yuremono/css-talk.git"
-    },
-    "engines": {
-        "vscode": "^1.70.0"
-    },
-    "icon": "icon.png",
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "onCommand:css-talk.toggleRegisterMode",
-        "onCommand:css-talk.registerLine",
-        "onCommand:css-talk.transformToCSS"
-    ],
-    "main": "./out/extension.js",
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "pretest": "npm run compile",
-        "test": "node ./out/test/runTest.js"
-    },
-    "devDependencies": {
-        "@types/node": "^24.1.0",
-        "@types/node-fetch": "^2.6.12",
-        "@types/vscode": "^1.70.0",
-        "typescript": "^4.9.5",
-        "vscode-test": "^1.5.2"
-    },
-    "contributes": {
-        "configuration": {
-            "title": "CSS Talk",
-            "properties": {
-                "css-talk.apiKey": {
-                    "type": "string",
-                    "default": "",
-                    "description": "Your personal OpenAI API key"
-                },
-                "css-talk.systemPrompt": {
-                        "type": "string",
-                        "default": "",
-                        "description": "CSS変換時に用いるシステムプロンプト（改行は \\n を使用）"
-                }
-            }
+        "name": "css-talk",
+        "displayName": "CSS Talk",
+        "description": "不正確な音声入力をCSSプロパティに変換VS Code拡張",
+        "version": "0.0.4",
+        "publisher": "yuremono",
+        "repository": {
+                "type": "git",
+                "url": "https://github.com/yuremono/css-talk.git"
         },
-        "commands": [
-            {
-                "command": "css-talk.toggleRegisterMode",
-                "title": "CSS Talk: 登録モード切り替え"
-            },
-            {
-                "command": "css-talk.registerLine",
-                "title": "CSS Talk: 現在行を辞書に登録"
-            },
-            {
-                "command": "css-talk.transformToCSS",
-                "title": "CSS Talk: 音声入力テキストをCSSに変換"
-            }
+        "engines": {
+                "vscode": "^1.70.0"
+        },
+        "icon": "icon.png",
+        "galleryBanner": {
+                "color": "#111111",
+                "theme": "dark"
+        },
+    "categories": [
+                "Other"
         ],
-        "keybindings": [
-            {
-                "command": "css-talk.toggleRegisterMode",
-                "key": "cmd+ctrl+shift+r",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "css-talk.registerLine",
-                "key": "cmd+ctrl+shift+d",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "css-talk.transformToCSS",
-                "key": "cmd+ctrl+shift+e",
-                "when": "editorTextFocus"
-            }
-        ]
-    },
-    "dependencies": {
-        "node-fetch": "^2.7.0"
-    }
+        "activationEvents": [
+                "onCommand:css-talk.toggleRegisterMode",
+                "onCommand:css-talk.registerLine",
+                "onCommand:css-talk.transformToCSS"
+        ],
+        "main": "./out/extension.js",
+        "scripts": {
+                "vscode:prepublish": "npm run compile",
+                "compile": "tsc -p ./",
+                "watch": "tsc -watch -p ./",
+                "pretest": "npm run compile",
+                "test": "node ./out/test/runTest.js"
+        },
+        "devDependencies": {
+                "@types/node": "^24.1.0",
+                "@types/node-fetch": "^2.6.12",
+                "@types/vscode": "^1.70.0",
+                "typescript": "^4.9.5",
+                "vscode-test": "^1.5.2"
+        },
+        "contributes": {
+                "configuration": {
+                        "title": "CSS Talk",
+                        "properties": {
+                                "css-talk.apiKey": {
+                                        "type": "string",
+                                        "default": "",
+                                        "description": "Your personal OpenAI API key"
+                                },
+                                "css-talk.systemPrompt": {
+                                        "type": "string",
+                                        "default": "",
+                                        "description": "CSS変換時に用いるシステムプロンプト（改行は \\n を使用）"
+                                }
+                        }
+                },
+                "commands": [
+                        {
+                                "command": "css-talk.toggleRegisterMode",
+                                "title": "CSS Talk: 登録モード切り替え"
+                        },
+                        {
+                                "command": "css-talk.registerLine",
+                                "title": "CSS Talk: 現在行を辞書に登録"
+                        },
+                        {
+                                "command": "css-talk.transformToCSS",
+                                "title": "CSS Talk: 音声入力テキストをCSSに変換"
+                        }
+                ],
+                "keybindings": [
+                        {
+                                "command": "css-talk.toggleRegisterMode",
+                                "key": "cmd+ctrl+shift+r",
+                                "when": "editorTextFocus"
+                        },
+                        {
+                                "command": "css-talk.registerLine",
+                                "key": "cmd+ctrl+shift+d",
+                                "when": "editorTextFocus"
+                        },
+                        {
+                                "command": "css-talk.transformToCSS",
+                                "key": "cmd+ctrl+shift+e",
+                                "when": "editorTextFocus"
+                        }
+                ]
+        },
+        "dependencies": {
+                "node-fetch": "^2.7.0"
+        }
 }
